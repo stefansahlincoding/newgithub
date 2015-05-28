@@ -1,0 +1,9 @@
+A collection of different Android projects from the LNU course. 
+
+Project 2 contains an rss reader where the user can choose topics from different categories and get it fetched from an RSS source. The project uses different widgets to keep count of the incoming news from each topic. The user can then click on each news item from a list and go to the newspaper site that contains the article.
+
+Second assignement contains an MP3 player, an alarm clock and a CRUD application for adding, sorting, updating and the deleting countries and also change some basic settings such as color and letter size. 
+
+Third assignement contains a widget project for weather fetched from YR.NO, two different Google map projects for creating paths between cities and get the distance from them by a geolocation API. It also contains a broadcast receiver that collects incoming calls, saves them in a separate document and makes it possible to send SMS and emails to the numbers
+
+All files are made by Stefan except for those where its commented in the beginning of the file. 
