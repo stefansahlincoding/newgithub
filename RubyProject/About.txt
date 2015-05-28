@@ -1,0 +1,1 @@
+A simple CRUD application (Create, Read, Update, Delete) where the user can register and log in and add projects and minigoals (parts of project), and handle basic CRUD handling with them. 
