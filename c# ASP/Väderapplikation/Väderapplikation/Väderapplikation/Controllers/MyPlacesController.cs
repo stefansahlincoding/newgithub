@@ -18,8 +18,7 @@ namespace Väderapplikation.Controllers
             if (Request.IsAuthenticated)
             {
                 var username = User.Identity.Name;
-                var userlist = mpr.GetAllWeather(username);
-                
+                var userlist = mpr.GetAllWeather(username);              
                 ViewBag.UserMessage = message;
                 return View(userlist);
             }           
@@ -105,14 +104,11 @@ namespace Väderapplikation.Controllers
                 MyPlace myweather = new MyPlace();
                 myweather.place = model.place;
                 var placeService2 = new PlaceService2();
-
                 var username = User.Identity.Name;
                 var place = myweather.place;
                 var region = model.region;
-                //Prova att istället här kalla på GetWeatherlist
                 
                 List<MyPlace> weatherlist = new List<MyPlace>();
-                //Weatherlist kollar om användaren redan har platsen.
                 weatherlist = mpr.GetWeatherlist(username, place, region); 
                 int number = weatherlist.Count;
                 if (number > 0)
@@ -124,35 +120,28 @@ namespace Väderapplikation.Controllers
                 bool exists = placeService2.CheckExistanceYr(place, region);
                 if (exists == false)
                 {
-                    //Platsen finns inte
                     string userMessage = "Din post har inte sparats eftersom platsen inte finns på vädersidan";
                     return RedirectToAction("NewCreate", "MyPlaces", new { message = userMessage });
                 }
 
                 var newCoordinates = placeService2.GetNewCoordinates(place, region);
 
-                if (newCoordinates == null) // || newCoordinates.Count == 0
+                if (newCoordinates == null) 
                 {
                     string userMessage = "Din post har inte sparats eftersom platsen inte finns på geonames";
                     return RedirectToAction("NewCreate", "MyPlaces", new { message = userMessage });
                 }
-                
-                //Ska flyttas in i ovanstående if-sats.
                 if (newCoordinates.Count == 0)
                 {
                     return RedirectToAction("NewCreate", "MyPlaces");
                 }
-
                 myweather.longitude = decimal.Parse(newCoordinates[0], System.Globalization.CultureInfo.InvariantCulture);
                 myweather.latitude = decimal.Parse(newCoordinates[1], System.Globalization.CultureInfo.InvariantCulture);
                 myweather.region = region;
-                myweather.projectuser = username;
-
-                      
+                myweather.projectuser = username;                   
                 mpr.CreateWeather(myweather);
                 return RedirectToAction("Index");
                 }
-
                 return View(model);
             }
             return RedirectToAction("LogIn", "Account");
@@ -167,10 +156,8 @@ namespace Väderapplikation.Controllers
                 if (placeOwner == username)
                 {
                     MyPlace myweather = mpr.GetWeather(id);
-
                     if (myweather == null)
                     {
-                        //Skapa eventuellt en errorsida här.
                         return HttpNotFound();
                     }
                     return View(myweather);
@@ -180,10 +167,8 @@ namespace Väderapplikation.Controllers
                     return RedirectToAction("Index", "MyPlaces");
                 }
             }
-
             return RedirectToAction("LogIn", "Account");
         }
-
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -196,8 +181,6 @@ namespace Väderapplikation.Controllers
             }
             return RedirectToAction("LogIn", "Account");
         }
-
-        //Flytta/ta bort
         /*
         protected override void Dispose(bool disposing)
         {

@@ -10,12 +10,12 @@ namespace Väderapplikation.Models
 {
     public class ViewModel
     {
-        [DisplayName("Name")] //Bör ändras till Place
+        [DisplayName("Name")] 
         [Required]
         [StringLength(100)]
         public string place { get; set; }
 
-        [DisplayName("Region")] //Se om du kan ändra den här utan att det påverkar något annat
+        [DisplayName("Region")] 
         [Required]
         [StringLength(100)]
         public string region { get; set; }

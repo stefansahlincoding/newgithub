@@ -23,17 +23,10 @@ namespace Väderapplikation.Models
         }
 
         public void CreateWeather(MyWeather weather)
-        //Something is wheird here
         {
             db.MyWeathers.Add(weather);
             db.SaveChanges();
-            //user = new User();
-            //string message = "user created";
-            //return message;
-            //This one is not right
         }
-
-        //Se uppgift 2 gällande hur du ska göra här. 
 
         public void DeleteWeather(int id)
         {

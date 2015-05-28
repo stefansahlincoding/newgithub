@@ -5,12 +5,9 @@ using System.Web;
 
 namespace Väderapplikation.Models
 {
-    //public class PlacesRepository 
     public class PlacesRepository // : IRepository
     {
         private ss222enProjectEntities4 db = new ss222enProjectEntities4();
-
-       // private bool _disposed = false;
 
         public PlacesExt GetWeather(int id)
         {

@@ -10,10 +10,8 @@
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
-
     <fieldset>
         <legend>ViewModel</legend>
-
         <div class="editor-label">
             @Html.LabelFor(model => model.place)
         </div>
@@ -21,9 +19,6 @@
             @Html.EditorFor(model => model.place)
             @Html.ValidationMessageFor(model => model.place)
         </div>
-
-
-
         <p>
             <input type="submit" value="Create" />
         </p>

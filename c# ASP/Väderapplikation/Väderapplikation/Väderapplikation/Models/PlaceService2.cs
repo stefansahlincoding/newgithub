@@ -74,7 +74,6 @@ namespace Väderapplikation.Models
         public ExtWeather GetWeatherInfo(string place, string region)
         {
             string requestUristring = String.Format(@"http://www.yr.no/place/Sweden/{0}/{1}/forecast.xml", region, place);
-            //string requestUristring = String.Format(@"http://www.yr.no/place/Sweden/{0}/{1}/forecast.xml", "fakePlace", "fakeRegion");
             var request = WebRequest.Create(requestUristring);
             List<double> informationdouble = new List<double>();
             List<DateTime> informationdate = new List<DateTime>();

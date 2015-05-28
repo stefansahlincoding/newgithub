@@ -18,7 +18,6 @@
     @Html.ValidationSummary(true)
     <fieldset>
         <legend>Välj plats</legend>
-
         <div class="editor-label">
             @Html.LabelFor(model => model.place)
         </div>
@@ -39,11 +38,9 @@
 </div>
 
 <script>
-    //Fungerar så här långt. Nästa steg är att hitta ett sätt att skriva ut varje värde i local storage.
     function getInfo() {
         var storagelength = localStorage.length;
         var textbox = document.getElementById("localstoragebox");
-        //alert(textbox.value);
         if (typeof (Storage) !== "undefied") {
             localStorage.setItem(storagelength, textbox.value);
             document.getElementById("result").innerHTML = /*"Innehåll: " + localStorage.text +*/ "Längd på local storage: " + storagelength + " senaste värdet: " + localStorage[storagelength] /*"Nyckel: " + localStorage.key*/;

@@ -10,9 +10,6 @@
 <input id="mytextbox2" type="hidden" name="textbox" value="@ViewBag.longitude.ToString()" />
 
 <h2>Vädret för @Model.placeName.ToString() denna vecka</h2>
-
-
-<!--Ersätt om möjligt detta med en loop-->
 <div id="weathertablediv">
     <table border="1">
         <tr>
@@ -53,10 +50,6 @@
 
 <script>
 
-    //Sätt igång en loop som placerar in sökningen i localstorage, värdet ska vara platsen som sökts och nyckeln ska vara användarens username plus siffran.
-    //Förhoppningsvis går det att använda en array till det här.
-
-
     function initialize() {
 
         var textbox = document.getElementById("mytextbox");
@@ -78,14 +71,8 @@
         var marker = new google.maps.Marker({
             position: myCenter,
         });
-
         marker.setMap(map);
     }
-    //Local storage går igång redan vid första postningen och fylls sedan på vid varje nu hämtning.
-    //Skriptet går så länge man befinner sig på sidan. Varje gång användaren trycker på sök-knappen så hamnar sökningen i local storage.
-    //Värdet är innehållet i sökrutan, nyckeln är ett nummer. Se om attributet length finns som gör att man kan hämta längden på local storage innan man sätter värdet.
-    //Vid varje laddning av sidan hämtar scriptet ut allt innehåll som man har lagt i local storage och lägger det i en länklista bredvid kartan.
-    //Det ska även finnas en clearknapp som rensar local storage.
 
 </script>
 
