@@ -1,0 +1,11 @@
+This is a collection of files and projects made in PHP and JavaScript. JavaScript basic is a small directory that contains a couple of files used for a memory and a form validation
+
+Laravel project files contains my backend files from a project called PlatsArkivet that we used in a project for a web company. I have here choosen to only show the project files that i worked with and it is all in Laravel.
+
+Map project is a PHP/Javascript project that I use as a reference for web scraping and for presenting a Google map for it in Javascript and PHP­
+
+Message project is a PHP project made in an own produced MVC template where the users can register and log in and send messages to each others, they can also delete the messages and choose which ones of the other users they want to block. 
+
+PHP xml and xslt are some experiment files that I use for working with those two techniques and also for presenting statistics in CVG format. 
+
+webbskrapning is from a laboration where a scraped a web site and saved the links in XML, Json and Sqlite, via Ajax requests. 
