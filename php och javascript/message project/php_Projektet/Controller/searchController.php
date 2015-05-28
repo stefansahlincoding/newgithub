@@ -27,8 +27,7 @@ class SearchController{
 			return $body;
 		}	
 		else {
-			//Det här meddelandet ska komma in någon annanstans ifrån. 
-			$body = "Du måste logga in för att kunna se den här sidan (Visa länk)";  //Kalla på den statiska funktionen ej inloggad
+			$body = "Du måste logga in för att kunna se den här sidan (Visa länk)";  
 			return $body;
 		}				
 	}

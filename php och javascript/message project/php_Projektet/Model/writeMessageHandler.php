@@ -15,7 +15,7 @@ class WriteMessageHandler{
 	public function GetAllMembers(){
 		$username = $this->username;
 		$membersArray = Array();			
-		$query = "SELECT Username, P_Id FROM Members2";		//Kör bind_param här. 
+		$query = "SELECT Username, P_Id FROM Members2";		
 		$result = $this->m_mysqli->query($query);
 		while ($row = $result->fetch_array()){
 			$membersArray[] = $row;
