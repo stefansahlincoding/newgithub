@@ -1,4 +1,6 @@
-This is a collection of files and projects made in PHP and JavaScript. JavaScript basic is a small directory that contains a couple of files used for a memory and a form validation
+This is a collection of files and projects made in PHP and JavaScript. Note that Html, CSS, JavaScript and various other techniques are used within all of the directories and not only the Javascript directory.
+
+JavaScript basic is a small directory that contains a couple of files used for a memory and a form validation.
 
 Laravel project files contains my backend files from a project called PlatsArkivet that we used in a project for a web company. I have here choosen to only show the project files that i worked with and it is all in Laravel.
 
