@@ -1,0 +1,5 @@
+SELECT TOP 50 PERCENT * FROM Persons
+WHERE RegisterDate BETWEEN '2015' AND '2016-01-01'
+
+SELECT MONTH(RegisterDate) AS RegisterYear
+FROM Persons
